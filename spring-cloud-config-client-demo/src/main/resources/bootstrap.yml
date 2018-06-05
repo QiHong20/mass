@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+#      discovery:
+#        enabled: true
+#      label: master
+#      uri: http://127.0.0.1:8888
+#      profile: dev

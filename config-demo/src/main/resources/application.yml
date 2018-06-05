@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:///F:/testConfig
+  application:
+    name: spring-cloud-config-demo
+server:
+  port: 8888
