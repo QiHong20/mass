@@ -10,3 +10,7 @@ spring:
     name: spring-cloud-config-demo
 server:
   port: 8888
+logging:
+  path: /var/log/config
+  level:
+    root: info
