@@ -27,7 +27,7 @@ public class DemoGetpicturemetadataApplication {
 
     @Scheduled(cron = "0/5 * * * * ?")
     public void getImageMeta() throws Exception {
-        Resource resource = new ClassPathResource("1.jpg");
+        Resource resource = new ClassPathResource("2.jpg");
         logger.info(resource.getFile().getAbsolutePath());
         Metadata metadata = ImageMetadataReader.readMetadata(resource.getInputStream());
         for (Directory directory : metadata.getDirectories()) {

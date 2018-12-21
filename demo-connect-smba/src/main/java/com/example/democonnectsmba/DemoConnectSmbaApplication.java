@@ -28,9 +28,10 @@ public class DemoConnectSmbaApplication {
         String password = "qihong19951216";
         String host = "192.168.1.182";
         String path = "/share";
-//        String remoteUrl = "smb://" + username + ":" + password + "@" + host + path + (path.endsWith("/") ? "" : "/");
-        String remoteUrl = "smb://" + host + path + (path.endsWith("/") ? "" : "/");
+    //        String remoteUrl = "smb://" + username + ":" + password + "@" + host + path + (path.endsWith("/") ? "" : "/");
+            String remoteUrl = "smb://" + host + path + (path.endsWith("/") ? "" : "/");
         SmbFile remoteFile = new SmbFile(remoteUrl);
+        remoteFile.connect();
         if (remoteFile.isDirectory()) {
             String[] files = remoteFile.list();
             for (String fileName : files) {
@@ -40,7 +41,7 @@ public class DemoConnectSmbaApplication {
                 }
             }
         }
-        remoteFile.connect();
+
         return "";
     }
 
